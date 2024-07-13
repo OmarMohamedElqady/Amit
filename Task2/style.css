@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+    transition: 0.5s;
+}
+
+.My_Task {
+    width: 100%;
+    height: 100vh; /* ملء الشاشة بالكامل */
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.All {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Head {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.MyHeader {
+    color: white;
+    line-height: 60px;
+}
+
+.My_Span {
+    color: #b79632;
+    font-weight: 800;
+    font-size: 70px;
+}
+
+.MyImg {
+    width: 50%;
+    height: 100%;
+    border-radius: 0 30px 30px 0;
+    object-fit: cover;
+}
