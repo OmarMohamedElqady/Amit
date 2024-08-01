@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 0 20px;
+        transition: 0.5s;
+        height: auto;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+header .logo {
+    height: 50px;
+}
+
+header .logo img {
+    height: 100%;
+    width: auto;
+}
+
+header nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li.highlight {
+    background-color: #b79632;
+    color: black;
+    border-radius: 5px;
+}
+
+header nav ul li:hover {
+    background-color:#b79632;
+    transition: 1.3s;
+    border-radius: 20px;
+    color: black;
+}
+
+.txt1 {    
+
+    font-family: "Kanit", sans-serif;
+    color: rgb(37, 18, 18);
+    font-weight: 600;
+    font-size: 60px;
+    text-align: center;
+}
+
+.span1 {
+    color: #b79632;
+}
+
+.heading1 {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn1 {
+    
+    color: white;
+    background-color: #b79632;
+    padding: 19px 60px;
+    margin: 30px;
+    border-radius: 90px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sec_1 {
+    background-image: url(./images/1.png);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50vh 20px 20px 20px;
+    background-attachment: fixed;
+
+    
+}
+.sec_2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #181818;;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+}
+
+
+
+.sec_2 h1 {
+    color: #b79632;
+    padding: 12px;
+}
+
+
+.practice_areas {
+    padding: 0 20px 20px 0;
+}
+
+
+.practice_areas h1 {
+    font-size: 50px;
+}
+
+
+.sec_2 p {
+    color: white;
+    padding: 20px;
+}
+
+.arrow {
+    width: 13px;
+    height: 13px;
+    margin-left: 10px;
+}
+img {
+    border-style: none;
+}
+.Prj_Link{
+    
+    text-decoration: none;
+    color: #b79632;
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+a {
+    background-color: transparent;
+    transition: 0.8s;
+}
+
+
+.info1 {
+    text-align: center;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    header .menu-toggle {
+        display: block;
+        transition: 0.5s;
+    }
+}
+
+header .menu-toggle {
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.sec_3 {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(24, 19, 19);
+}
+
+.sec_3 h1 {
+    color: white;
+    font-family: "Urbanist", sans-serif;
+    line-height: 60px;
+    font-size: 40px;
+}
+
+.sec_3 img {
+    border-radius: 20px;
+    width: 470px;
+}
+
+.sp2 {
+    color: #b79632;
+    font-weight: 800;
+    font-size: 70px;
+}
+
+.LastHead {
+    text-align: center;
+    padding: 50px;
+    background-color: #181818;
+    color: #b79632;
+    font-weight: 700;
+    font-size: 70px;
+}
+
+.allPic {
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.Pic_sect {
+    padding: 10px;
+    width: 280px;
+}
+
+.companies {
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+img {
+    border-style: none;
+}
+
+.companiesHead {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 28px;
+    color: #b79632;
+}
+
+.footerContent{
+    background-color: #000000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; 
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.footerAbout {
+    width: 350px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+
+.about-logo {
+    
+    width: 150px;
+    height: 75px;
+    margin-bottom: 30px;
+    object-fit: cover;
+}
+.about_P {
+    width: 90%;
+    text-align: center;
+    color: white;
+}
+
+.sec_4, .footerContent {
+    margin: 0;
+    padding: 0;
+}
+
+.sec_4 > *, .footerContent > * {
+    margin: 0;
+    padding: 0;
+}
+
+.footerContact {
+    color: white;
+    padding: 50px;
+  }
+  
+  .footerInfoHead {
+    color: #b79632;
+    margin-bottom: 20px;
+  }
+  
+  .phone {
+    display: flex;
+    align-items: center;
+  }
+  
+  .phoneLogo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  
+  .phone p {
+    margin: 0;
+  }
+  
+.workingFooter {
+    padding: 50px;
+    color: white;
+}
+
+.man, .emotion {
+    width:  38px;
+    height: 38px;
+    margin-right: 10px;
+}
+
+.businessInfo {
+    display: flex;
+    align-items: flex-start; /* تعدل هذا الجزء */
+    margin-bottom: 10px; /* لإضافة مسافة بين كل فقرة */
+}
+
+.footerAbout, .footerContact, .workingFooter {
+    width: 30%; 
+    color: white;
+}
+
+.footerPar {
+    padding-right: 30px;
+    color: rgb(255, 255, 255);
+
+}
+
+
