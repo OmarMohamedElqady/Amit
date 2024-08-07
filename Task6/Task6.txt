@@ -1,0 +1,233 @@
+1. Program to allow the user to enter a number then print it
+number = int(input("Enter a number: "))
+print(f"Output: {number}")
+
+
+2. Program to check if a number is divisible by 3 and 4
+number = int(input("Enter a number: "))
+if number % 3 == 0 and number % 4 == 0:
+    print("Output: Yes")
+else:
+    print("Output: No")
+
+
+3. Program to find the maximum of two integers
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+max_num = max(a, b)
+print(f"Output: {max_num}")
+
+
+4. Program to check if a number is negative or positive
+number = int(input("Enter a number: "))
+if number < 0:
+    print("Output: negative")
+else:
+    print("Output: positive")
+
+
+5. Program to find the maximum and minimum of three integers
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+max_num = max(a, b, c)
+min_num = min(a, b, c)
+
+print(f"Max element = {max_num}")
+print(f"Min element = {min_num}")
+
+
+6. Program to check if a number is even or odd
+number = int(input("Enter a number: "))
+if number % 2 == 0:
+    print("Output: even")
+else:
+    print("Output: odd")
+
+
+7. Program to check if a character is a vowel or consonant
+char = input("Enter a character: ").lower()
+if char in 'aeiou':
+    print("Output: vowel")
+else:
+    print("Output: consonant")
+
+
+8. Program to print all numbers from 1 to the given number
+number = int(input("Enter a number: "))
+for i in range(1, number + 1):
+    print(i, end=" ")
+print()
+
+
+9. Program to print multiplication table up to 12
+number = int(input("Enter a number: "))
+for i in range(1, 13):
+    print(number * i, end=" ")
+print()
+
+
+10. Program to print all even numbers from 1 to the given number
+number = int(input("Enter a number: "))
+for i in range(1, number + 1):
+    if i % 2 == 0:
+        print(i, end=" ")
+print()
+
+
+11. Program to calculate the power of a number
+base = int(input("Enter base number: "))
+exponent = int(input("Enter exponent: "))
+result = base ** exponent
+print(f"Output: {result}")
+
+
+12. Program to calculate total, average, and percentage of marks
+marks = []
+for i in range(5):
+    mark = int(input(f"Enter mark for subject {i+1}: "))
+    marks.append(mark)
+
+total_marks = sum(marks)
+average_marks = total_marks / 5
+percentage = (total_marks / 500) * 100
+
+print(f"Total marks = {total_marks}")
+print(f"Average Marks = {average_marks}")
+print(f"Percentage = {percentage}")
+
+
+13. Program to print number of days in a month
+month = int(input("Enter month number: "))
+if month in [1, 3, 5, 7, 8, 10, 12]:
+    print("Days in Month: 31")
+elif month in [4, 6, 9, 11]:
+    print("Days in Month: 30")
+elif month == 2:
+    print("Days in Month: 28 or 29")
+else:
+    print("Invalid month number")
+
+
+14. Program to calculate percentage and grade
+subjects = ["Physics", "Chemistry", "Biology", "Mathematics", "Computer"]
+marks = []
+
+for subject in subjects:
+    mark = int(input(f"Enter marks for {subject}: "))
+    marks.append(mark)
+
+total_marks = sum(marks)
+percentage = (total_marks / 500) * 100
+
+if percentage >= 90:
+    grade = 'A'
+elif percentage >= 80:
+    grade = 'B'
+elif percentage >= 70:
+    grade = 'C'
+elif percentage >= 60:
+    grade = 'D'
+elif percentage >= 40:
+    grade = 'E'
+else:
+    grade = 'F'
+
+print(f"Percentage: {percentage}%")
+print(f"Grade: {grade}")
+
+
+15. Program to print total number of days in a month using switch-case equivalent
+def days_in_month(month):
+    switcher = {
+        1: 31,
+        2: "28 or 29",
+        3: 31,
+        4: 30,
+        5: 31,
+        6: 30,
+        7: 31,
+        8: 31,
+        9: 30,
+        10: 31,
+        11: 30,
+        12: 31
+    }
+    return switcher.get(month, "Invalid month number")
+
+month = int(input("Enter month number: "))
+print(f"Days in Month: {days_in_month(month)}")
+
+
+
+16. Program to check whether an alphabet is vowel or consonant using switch-case equivalent
+
+def check_vowel_consonant(char):
+    switcher = {
+        'a': "vowel",
+        'e': "vowel",
+        'i': "vowel",
+        'o': "vowel",
+        'u': "vowel"
+    }
+    return switcher.get(char.lower(), "consonant")
+
+char = input("Enter a character: ")
+print(f"Output: {check_vowel_consonant(char)}")
+
+
+
+17. Program to find maximum between two numbers using switch-case equivalent
+def find_max(a, b):
+    return a if a > b else b
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print(f"Output: {find_max(a, b)}")
+
+
+18. Program to check whether a number is even or odd using switch-case equivalent
+def check_even_odd(number):
+    return "even" if number % 2 == 0 else "odd"
+
+number = int(input("Enter a number: "))
+print(f"Output: {check_even_odd(number)}")
+
+
+19. Program to check whether a number is positive, negative, or zero using switch-case equivalent
+
+def check_number(number):
+    switcher = {
+        number > 0: "positive",
+        number < 0: "negative",
+        number == 0: "zero"
+    }
+    return switcher[True]
+
+number = int(input("Enter a number: "))
+print(f"Output: {check_number(number)}")
+
+
+20. Program to create a Simple Calculator using switch-case equivalent
+def calculator(a, b, operator):
+    switcher = {
+        '+': a + b,
+        '-': a - b,
+        '*': a * b,
+        '/': a / b if b != 0 else "Division by zero error"
+    }
+    return switcher.get(operator, "Invalid operator")
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+operator = input("Enter operator (+, -, *, /): ")
+
+print(f"Output: {calculator(a, b, operator)}")
+
+
+
+
+
+
+
