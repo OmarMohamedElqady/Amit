@@ -1,0 +1,43 @@
+1)
+function reverseBit(x) {
+    return x ^ 1;
+}
+
+//example: 
+console.log(reverseBit(1)); // 0
+console.log(reverseBit(0)); // 1
+///////////////////////////////////////
+
+
+2)
+function sumOfDigits(num) {
+    return num.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+}
+
+
+//example: 
+console.log(sumOfDigits(123)); // 6
+console.log(sumOfDigits(456)); // 15
+///////////////////////////////////////
+
+
+3) 
+function filterNumbers(arr) {
+    return arr.filter(item => typeof item === 'number');
+}
+
+//example: 
+console.log(filterNumbers(['1', 2, 'three', 4.0, '5'])); // [2, 4]
+///////////////////////////////////////
+4)
+function allVowels(string) {
+    const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+    return [...string].every(char => vowels.has(char));
+}
+
+// example:
+console.log(allVowels("aeiou")); //  true
+console.log(allVowels("hello")); //  false
+
+
+
