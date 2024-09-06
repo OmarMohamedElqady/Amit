@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #2b1d0f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header1 {
+    background-color: #222;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.Logo {
+    text-decoration: none;
+    color: rgb(55, 192, 255);
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.navigation a {
+    color: rgb(55, 192, 255);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 30px;
+}
+
+.navigation a:hover {
+    letter-spacing: 4px;
+    color: #601c;
+    border-radius: 8px 9px;
+    transition: 1s;
+}
+
+/* Space between headers */
+.spacer {
+    height: 100px;
+}
+
+.header2 nav {
+    background-color: #212121;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.header2 nav h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.header2 nav form {
+    display: flex;
+    justify-content: center;
+}
+
+form input[type="text"] {
+    flex-grow: 1;
+    margin: 10px;
+}
+
+form input[type="text"], button[type="submit"] {
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+form button[type="submit"] {
+    background-color: rgb(198, 34, 34);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+form button[type="submit"]:hover,
+.recipe button:hover {
+    background-color: rgb(156, 68, 68);
+}
+
+.recipe-container {
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+}
+
+.recipe-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #494c2f;
+    border-radius: 12px;
+    width: 40%;
+    height: 60%;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    overflow: scroll;
+}
+
+.recipe {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgb(78, 73, 73, 0.1),
+        -5px -5px 10px rgb(34, 34, 34, 0.5);
+    cursor: pointer;
+    max-width: 350px;
+}
+
+.recipe img {
+    height: 300px;
+}
+
+.recipe h3 {
+    font-size: 24px;
+    margin-block: 5px;
+}
+
+.recipe p {
+    font-size: 20px;
+    color: #4a4a4a;
+    margin: 5px 0;
+}
+
+.recipe span {
+    font-weight: 600;
+}
+
+.recipe button {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color: #f44336;
+    color: #fff;
+}
+
+.recipe-close-btn {
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f44336;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipeName {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.ingredientsList li {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.recipeInstructions p {
+    line-height: 30px;
+    white-space: pre-line;
+}
+
+.recipe-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.recipe-details::-webkit-scrollbar-thumb {
+    background-color: #b5b5ba;
+    border-radius: 16px;
+}
+
+/* Footer styling */
+.footer {
+    background-color: rgb(215, 236, 255);
+    color: rgb(0, 49, 49);
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.footer-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.footer span {
+    color: rgb(63, 0, 0);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.footer .footer-title a {
+    padding: 0 12px 0 0;
+}
+
+.footer p {
+    color: rgb(119, 118, 118);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+    .header2 nav {
+        flex-direction: column;
+    }
+
+    .header2 nav form {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
