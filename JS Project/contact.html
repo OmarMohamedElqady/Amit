@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+</head>
+<body>
+
+    <header>
+        <a href="#" class="Logo">Omar Elqady</a>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us </a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="profile.html">Profile</a>
+    </nav>
+    </header>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We would love to hear your feedback. Please fill out the form below:</p>
+        <form id="feedback-form">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <h2>Your Feedback</h2>
+        <div id="feedback-list"></div>
+    </div>
+
+    <script src="contact.js"></script>
+</body>
+<footer class="footer">
+    <p>copyrights @ <span>Omar Elqady</span></p>
+    <div class="footer-title">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        
+    </div>
+</footer>
+
+
+</html>
