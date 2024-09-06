@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header.header1 {
+            background-color: #222;
+            text-align: center;
+            width: 80%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 200px;
+            color: #fff;
+        }
+
+        header .Logo {
+            text-decoration: none;
+            color: rgb(55, 192, 255);
+            font-size: 1.8em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        header .navigation a {
+            color: rgb(55, 192, 255);
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-weight: 600;
+            padding: 10px;
+        }
+
+        header .navigation a:hover {
+            letter-spacing: 4px;
+            color: #601c;
+            border-radius: 8px 9px;
+            transition: 1s;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 80px 20px 60px 20px; /* Adjust margin to account for header and footer */
+            flex: 1;
+        }
+
+        .container h2 {
+            margin-top: 0;
+        }
+
+        .profile-info {
+            margin: 20px 0;
+        }
+
+        .profile-info label {
+            font-weight: bold;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        footer.footer {
+            background-color: rgb(215, 236, 255);
+            color: rgb(0, 49, 49);
+            padding: 2em;
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            font-size: 16px;
+        }
+
+        footer .footer-title {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        footer .footer span {
+            color: rgb(63, 0, 0);
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        footer .footer-title a {
+            padding: 0 12px 0 0;
+        }
+
+        footer p {
+            color: rgb(119, 118, 118);
+            font-size: 25px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header1">
+        <a href="#" class="Logo">Omar Elqady</a>
+        <nav class="navigation">
+            <a href="home.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>User Profile</h2>
+        <div class="profile-info">
+            <label for="username">Username:</label>
+            <p id="username"></p>
+        </div>
+        <div class="profile-info">
+            <label for="password">Password:</label>
+            <p id="password"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>copyrights @ <span>Omar Elqady</span></p>
+        <div class="footer-title">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Display user data from session storage
+        window.onload = function() {
+            const username = sessionStorage.getItem('username');
+            const password = sessionStorage.getItem('password');
+            if (username) {
+                document.getElementById('username').textContent = username;
+            } else {
+                document.getElementById('username').textContent = 'Not logged in';
+            }
+            if (password) {
+                document.getElementById('password').textContent = '******'; // Hide password for security
+            } else {
+                document.getElementById('password').textContent = 'Not available';
+            }
+        }
+    </script>
+</body>
+</html>
